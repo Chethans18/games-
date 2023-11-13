@@ -6,12 +6,14 @@ function getComputerChoice() {
     const choices = ['ROCK', 'PAPER', 'SCISSORS'];
     const choice = Math.floor(Math.random() * 3)
     console.log("computer choice:" + choices[choice])
+    return choices[choice];
 }
 
 function getPlayerChoice() {
     const playerInput = prompt("Enter Your Choice");
     const playerChoice = playerInput.toUpperCase();
     console.log("your choice" + playerChoice);
+    return playerChoice;
 
 }
 
@@ -52,8 +54,8 @@ function playRound(playerSelection, computerSelection) {
 }
 function game() {
     for (let i = 0; i < 5; i++) {
-        let computerSelection = getComputerChoice();
         let playerSelection = getPlayerChoice();
+        let computerSelection = getComputerChoice();
         playRound(playerSelection, computerSelection);
     }
     winner();
