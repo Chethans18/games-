@@ -1,0 +1,11 @@
+* {
+    background-color: black;
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
+    text-align: center;
+}
+
+strong {
+    color: red;
+}
