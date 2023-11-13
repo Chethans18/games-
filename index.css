@@ -1,26 +1,25 @@
 body {
     background-color: black;
-    color: black;
+    color: white;
     font-size: larger;
     font-weight: bolder;
     text-align: center;
     /* back-ground image*/
-    background-image: url(./img/gamepic.jpg);
+    /* background-image: url(./img/gamepic.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 strong {
     color: red;
 }
 
-summary {
-
-    color: black;
+details {
+    font-size: x-large;
+    color: white;
 }
 
-p {
-    font-size: x-large;
-    color: red;
-
+div {
+    margin: 20px auto;
+    width: 75%;
 }
