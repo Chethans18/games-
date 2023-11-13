@@ -5,14 +5,14 @@ let playerScore = 0,
 function getComputerChoice() {
     const choices = ['ROCK', 'PAPER', 'SCISSORS'];
     const choice = Math.floor(Math.random() * 3)
-    console.log("computer choice:" + choices[choice])
+    console.log("computer choice: " + choices[choice])
     return choices[choice];
 }
 
 function getPlayerChoice() {
     const playerInput = prompt("Enter Your Choice");
     const playerChoice = playerInput.toUpperCase();
-    console.log("your choice" + playerChoice);
+    console.log("your choice: " + playerChoice);
     return playerChoice;
 
 }
@@ -61,8 +61,8 @@ function game() {
     winner();
 }
 function winner() {
-    console.log("Your score:" + playerScore)
-    console.log("Computer score:" + computerScore)
+    console.log("Your score: " + playerScore)
+    console.log("Computer score: " + computerScore)
     if (playerScore == computerScore) {
         console.log("Tie");
     }

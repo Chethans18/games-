@@ -1,11 +1,26 @@
-* {
+body {
     background-color: black;
-    color: white;
+    color: black;
     font-size: larger;
     font-weight: bolder;
     text-align: center;
+    /* back-ground image*/
+    background-image: url(./img/gamepic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 strong {
     color: red;
+}
+
+summary {
+
+    color: black;
+}
+
+p {
+    font-size: x-large;
+    color: red;
+
 }
