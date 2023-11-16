@@ -4,10 +4,7 @@ body {
     font-size: larger;
     font-weight: bolder;
     text-align: center;
-    /* back-ground image*/
-    /* background-image: url(./img/gamepic.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; */
+
 }
 
 strong {
@@ -22,8 +19,4 @@ details {
 div {
     margin: 20px auto;
     width: 75%;
-}
-
-p {
-    color: black;
 }
