@@ -73,14 +73,15 @@ function getResult(playerSelection, computerSelection) {
     choiceDiv.innerHTML = `your choice : ${playerSelection} and  computer choice: ${computerSelection}`;
     container.appendChild(choiceDiv)
     //display round winner
-    const winnerDiv = createElement('div');
-    winnerDiv.classList.add('winnerDiv')
-    winnerDiv.innerHTML = `Winner : ${playRound()}`
+    const winnerDiv = document.createElement('div');
+    winnerDiv.classList.add('winnerDiv');
+    winnerDiv.innerHTML = `Winner : ${playRound(playerSelection, computerSelection)}`
     container.appendChild(winnerDiv)
     //displays scores
     const scoreDiv = document.createElement('div')
     scoreDiv.classList.add('scoreDiv')
     scoreDiv.innerHTML = `your score: ${playerScore} and computer score ${computerScore} `;
+    container.appendChild(scoreDiv);
 
     if (playerScore == 5 || computerScore == 5) {
         gameover();
