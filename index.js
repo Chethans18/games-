@@ -6,6 +6,7 @@ let playerScore = 0,
 function getComputerChoice() {
     const choices = ['ROCK', 'PAPER', 'SCISSORS'];
     const choice = Math.floor(Math.random() * 3);
+    console.log("YOU CLICKED ROCK")
     return choices[choice];
 }
 
@@ -13,17 +14,18 @@ function getComputerChoice() {
 document.querySelector('#rock').addEventListener('click', () => {
     const playerSelection = 'ROCK';
     const computerSelection = getComputerChoice();
-    playRound(playerSelection, computerSelection);
+    getResult(playerSelection, computerSelection);
+
 });
 document.querySelector('#paper').addEventListener('click', () => {
     const playerSelection = 'PAPER';
     const computerSelection = getComputerChoice();
-    playRound(playerSelection, computerSelection);
+    getResult(playerSelection, computerSelection);
 });
 document.querySelector('#scissors').addEventListener('click', () => {
     const playerSelection = 'SCISSORS';
     const computerSelection = getComputerChoice();
-    playRound(playerSelection, computerSelection);
+    getResult(playerSelection, computerSelection);
 });
 
 //do comparision between player and computer choices
@@ -35,53 +37,50 @@ function playRound(playerSelection, computerSelection) {
         if (playerSelection == 'PAPER') {
             playerScore++;
             return "You Won";
-
-
         }
         else if (playerSelection == 'SCISSORS') {
             computerScore++;
             return "Computer Won";
-
         }
     }
     else if (computerSelection == 'PAPER') {
         if (playerSelection == 'SCISSORS') {
             playerScore++;
             return "You Won";
-
         }
         else if (playerSelection == 'ROCK') {
             computerScore++;
             return "Computer Won";
-
         }
     }
     else if (computerSelection == 'SCISSORS') {
         if (playerSelection == 'ROCK') {
             playerScore++;
             return "You Won";
-
         }
         else if (playerSelection == 'PAPER') {
             computerScore++;
             return "Computer Won";
-
         }
     }
-    getResult();
 }
 
-function getResult() {
+function getResult(playerSelection, computerSelection) {
     const container = document.querySelector('#container');
     //displays player choice and computer choice
     const choiceDiv = document.createElement('div');
     choiceDiv.classList.add('choiceDiv');
-    choiceDiv.textContent = '';
+    choiceDiv.innerHTML = `your choice : ${playerSelection} and  computer choice: ${computerSelection}`;
     container.appendChild(choiceDiv)
+    //display round winner
+    const winnerDiv = createElement('div');
+    winnerDiv.classList.add('winnerDiv')
+    winnerDiv.innerHTML = `Winner : ${playRound}`
+    container.appendChild(winnerDiv)
     //displays scores
     const scoreDiv = document.createElement('div')
     scoreDiv.classList.add('scoreDiv')
-    scoreDiv.textContent = 'your score: +' < br > '+ computer score';
+    scoreDiv.innerHTML = `your score: ${playerScore} and computer score ${computerScore} `;
 
     if (playerScore == 5 || computerScore == 5) {
         gameover();
