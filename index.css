@@ -11,12 +11,15 @@ strong {
     color: red;
 }
 
-details {
-    font-size: x-large;
-    color: white;
+
+#main {
+    margin: 150px auto;
+    width: 75%;
+
 }
 
-div {
-    margin: 20px auto;
-    width: 75%;
+button {
+    padding: 10px;
+    color: black;
+    font-size: larger;
 }
