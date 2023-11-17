@@ -85,7 +85,6 @@ function getResult(playerSelection, computerSelection) {
 
     if (playerScore == 5 || computerScore == 5) {
         gameover();
-
     }
 }
 function gameover() {
