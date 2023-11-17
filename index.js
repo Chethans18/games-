@@ -75,7 +75,7 @@ function getResult(playerSelection, computerSelection) {
     //display round winner
     const winnerDiv = createElement('div');
     winnerDiv.classList.add('winnerDiv')
-    winnerDiv.innerHTML = `Winner : ${playRound}`
+    winnerDiv.innerHTML = `Winner : ${playRound()}`
     container.appendChild(winnerDiv)
     //displays scores
     const scoreDiv = document.createElement('div')
